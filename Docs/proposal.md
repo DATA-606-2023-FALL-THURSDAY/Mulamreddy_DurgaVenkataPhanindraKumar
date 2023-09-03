@@ -44,4 +44,4 @@
 | isFraud | int | identifies a fraudulent transaction (1) and non fraudulent (0) | 0 - 1|
 
 * The target variable of the dataset is "isFraud" which will tell us whether the transaction is fraudulent or not dependign on the value of 0 and 1.
-* As of now, i am in a thought of considering all the columns but will make changes in the future depending on the EDA and further analysis. 
+* As of now, I am in a thought of considering all the columns but will make changes in the future depending on the EDA and further analysis. 
