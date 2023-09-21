@@ -30,18 +30,21 @@
 * Data Size (493.5 MB)
 * Data shape (6362620 of Rows and 11 Columns)
 - Data Dictionary
-| Column Name  | Data Type   | Definition                                     | Potential Values             | 
-|--------------|-------------|------------------------------------------------|-----------------------------|
-| Step   | int         |    Maps a unit of time in the real world. Here 1 step is 1 hour       |                1 - 743         |
-| type        | object         | Mode of the payment. Cashin, CashOut, Debit, Payment and transfer                           |      CashOut 35%, payment 34%, other 31%                    |
-| Amount         | float| amount of the transaction                           | 0 - 92.4m                      |
-| nameOrig       | object         | Customer who started the transaction                        | Almost alkl are Unique values  |
-| oldbalanceOrg    | float         | initial balance before the transaction. | 0 - 59.6m          |
-| newbalanceOrig  | float         | customer's balance after the transaction.                            | 0 - 49.6                         |
-| nameDest        | object       | Recepient Id of the transaction                         | unique values specified to the transaction area             |
-| oldbalanceDest | float    | Initial Balance before trasaction      | 0 - 356m        |
-| newbalanceDest | float |  recipient's balance after the transaction.  | 0-356m |
-| isFraud | int | identifies a fraudulent transaction (1) and non fraudulent (0) | 0 - 1|
+
+| Column Name       | Data Type | Definition                                               | Potential Values                  |
+|-------------------|-----------|---------------------------------------------------------|-----------------------------------|
+| Step              | int       | Maps a unit of time in the real world. Here 1 step is 1 hour | 1 - 743                           |
+| Type              | object    | Mode of the payment. Cashin, CashOut, Debit, Payment and transfer | CashOut 35%, payment 34%, other 31% |
+| Amount            | float     | Amount of the transaction                               | 0 - 92.4m                         |
+| NameOrig          | object    | Customer who started the transaction                    | Almost all are unique values      |
+| OldbalanceOrg     | float     | Initial balance before the transaction                 | 0 - 59.6m                        |
+| NewbalanceOrig    | float     | Customer's balance after the transaction               | 0 - 49.6                         |
+| NameDest          | object    | Recipient ID of the transaction                         | Unique values specified to the transaction area |
+| OldbalanceDest    | float     | Initial balance before the transaction                 | 0 - 356m                         |
+| NewbalanceDest    | float     | Recipient's balance after the transaction               | 0 - 356m                         |
+| IsFraud           | int       | Identifies a fraudulent transaction (1) and non-fraudulent (0) | 0 - 1                             |
+
+
 
 * The target variable of the dataset is "isFraud" which will tell us whether the transaction is fraudulent or not dependign on the value of 0 and 1.
 * As of now, I am in a thought of considering all the columns but will make changes in the future depending on the EDA and further analysis. 
