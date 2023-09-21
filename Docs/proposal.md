@@ -13,7 +13,7 @@
 
 1. A typical and useful use of data science in the fields of finance and cybersecurity is the "Fraud Detection in Financial Transactions" project. Build a machine learning model for this project with the goal of accurately identifying fraudulent transactions in a collection of financial transaction records.
 
-2. There are many things in which the credability of transaction is quite questionable. For protecting financial institutions from fradualent transactions/ unauthorized transactions, identity theft which will lead to a substantial loss for the banks. It helps in preventing criminal activity. This fraud detection will boost the consumer confidence in utilizing online merchant platforms for their daily uise and many more.
+2. There are many things in which the credability of transaction is quite questionable. For protecting financial institutions from fradualent transactions/ unauthorized transactions, identity theft which will lead to a substantial loss for the banks. It helps in preventing criminal activity. This fraud detection will boost the consumer confidence in utilizing online merchant platforms for their daily use and many more.
 
 3. **Some of the research questions are mentioned below**
  * What are the most common types of fraud in financial transactions, and how have they evolved over time?
