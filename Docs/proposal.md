@@ -63,7 +63,8 @@
 * First, we will see the what are the types present in the Type(Column).
 * This column contains the mode of payment as unique values as Cashin, CashOut, Debit, Payment and transfer
 * The below is the distribution of these types throughout the data set.
-   <img width="1000" alt="image" src="https://github.com/DATA-606-2023-FALL-THURSDAY/Mulamreddy_DurgaVenkataPhanindraKumar/blob/main/Data/visualize/Types_payment.png"> 
+   <img width="1000" alt="image" src="https://github.com/DATA-606-2023-FALL-THURSDAY/Mulamreddy_DurgaVenkataPhanindraKumar/blob/main/Data/visualize/Types_payment.png">
+* The categories were spread all over the df with Cash_out occupying the most and followed by Payment, cash_in, and Transfer with Debit being the least occupied.
 * Now we move onto the next column that is our target variable. the distribution and the pie chart was shown below.
    <img width="1000" alt="image" src="https://github.com/DATA-606-2023-FALL-THURSDAY/Mulamreddy_DurgaVenkataPhanindraKumar/blob/main/Data/visualize/image_2.png">
 * We will see whether the fraud is happening in all categories or only in some particular categories. So, the below displayed plot shows the categories which have fraud and which have no fraud.
