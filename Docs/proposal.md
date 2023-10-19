@@ -58,8 +58,8 @@
 ### 4.1.1 Checking and removing Duplicates from the Data Set.
 * Checking the duplicates from in the data set and we can see that there are no duplicates present in the data. So the data is free from duplicates.
 
-### 4.1.2 Analysing the data and Visualizations.
-* In this step we chekced the columns in the data frame and derived some insights to modify the data.
+## 4.2 Analysing the data and Visualizations.
+* In this step we checked the columns in the data frame and derived some insights to modify the data.
 * First, we will see the what are the types present in the Type(Column).
 * This column contains the mode of payment as unique values as Cashin, CashOut, Debit, Payment and transfer
 * The below is the distribution of these types throughout the data set.
@@ -70,9 +70,9 @@
 * From the graph, it can be seen that there were 6.3million trasactions are good whereas the 8213 trasactions reported fradulent behavior which has a 0.1 percentage.
 * Now, we need to know which type of transactions are showing anamoly and which are not.
 * We will see whether the fraud is happening in all categories or only in some particular categories. So, the below displayed plot shows the categories which have fraud and which have no fraud.
-   <img width="600" alt="image" src="https://github.com/DATA-606-2023-FALL-THURSDAY/Mulamreddy_DurgaVenkataPhanindraKumar/blob/main/Data/visualize/image_3.png">  
+   <img width="600" alt="image" src="https://github.com/DATA-606-2023-FALL-THURSDAY/Mulamreddy_DurgaVenkataPhanindraKumar/blob/main/Data/visualize/image_11.png">  
 * As the plot labels suggests, any label with zero means it doesn't have any fradulent behavior or transaction occured are secured.
-* As we can see it, the caogories Cash_In, Debit and payment didn't have nay fradulent behavior and there is no need for these types in the dataframe. Whereas the Cash_out and Transfer have shown significant fradulent behavior. Then, we will drop the Cash_In, Debit and payment and we have with only cash_out and transfer categories in the type column(Which shows the Mode of Trnsaction).
+* As we can see it, the catogories Cash_In, Debit and payment didn't have nay fradulent behavior and there is no need for these types in the dataframe. Whereas the Cash_out and Transfer have shown significant fradulent behavior. Then, we will drop the Cash_In, Debit and payment and we have with only cash_out and transfer categories in the type column (Which shows the Mode of Transaction).
 * After we have the data set with the almost equal distribution over the type and these only represent the anamoly in the transactions and the rest which doesn't have any relation were dropped.
  
 <img width="600" alt="image" src="https://github.com/DATA-606-2023-FALL-THURSDAY/Mulamreddy_DurgaVenkataPhanindraKumar/blob/main/Data/visualize/image_4.png">  
@@ -81,5 +81,18 @@
 <img width="800" alt="image" src="https://github.com/DATA-606-2023-FALL-THURSDAY/Mulamreddy_DurgaVenkataPhanindraKumar/blob/main/Data/visualize/image_8.png"> 
 
 <img width="800" alt="image" src="https://github.com/DATA-606-2023-FALL-THURSDAY/Mulamreddy_DurgaVenkataPhanindraKumar/blob/main/Data/visualize/image_9.png"> 
-* It's clear to see that the feature amount is almost skewed towards left, and most  of the fraudulent transactions are with amounts between 0-1M. We will move onto the heatmap analysis to see the corelation between the columns.
-<img width="800" alt="image" src="https://github.com/DATA-606-2023-FALL-THURSDAY/Mulamreddy_DurgaVenkataPhanindraKumar/blob/main/Data/visualize/image_10.png"> 
+* The distribution of the overall transaction amount is right-skewed, ranging between 0-10 million.
+* The distribution of fraudulent transaction amounts is also right-skewed, ranging between 0-10 million, with a spike at 10 million. This suggests that all fraudulent transactions do not exceed 10 million per transfer. This might be due to reaching the maximum transfer limit of the bank.
+<img width="800" alt="image" src="https://github.com/DATA-606-2023-FALL-THURSDAY/Mulamreddy_DurgaVenkataPhanindraKumar/blob/main/Data/visualize/image_!2.png"> 
+* There's a notable correlation between 'amount' and 'oldbalanceOrg' that distinguishes between all transactions and fraudulent transactions. This is typical for fraud because criminals are likely intending to empty the target's account regardless of the savings balance.
+
+## 4.3 Data Preprocessing
+
+* Before diving into model training, it's essential to preprocess the data to ensure it's in the right format for our machine learning algorithms.
+
+  ### In this Section
+* We drop the unused columns.
+* Convert data types for isFraud and isFlaggedFraud to boolean type.
+* Encode the categorical columns using OneHotEncoder.
+* Further divide the data into training and testing sets. Stratified sampling is used to ensure that both sets have a similar distribution of the target variable.
+ 
