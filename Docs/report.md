@@ -3,6 +3,7 @@
 * Fraud Detection in Financial transactions
 * Prepared for UMBC Data Science Master Degree Capstone by Dr Chaojie (Jay) Wang
 * Durga venkata Phanindra kumar Mulamreddy
+* Fall 2023
 * [Github] (https://github.com/Phanid221)
 * [Linkedin] (https://www.linkedin.com/in/durga-venkata-phanindra-kumar-mulamreddy-19985114b/)
 * [Presentation File] (Will update later)
