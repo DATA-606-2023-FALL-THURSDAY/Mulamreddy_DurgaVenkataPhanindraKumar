@@ -183,3 +183,4 @@ One-Hot Encoding or Label Encoding: Handling categorical variables.
 
 <img width="800" alt="image" src="https://github.com/DATA-606-2023-FALL-THURSDAY/Mulamreddy_DurgaVenkataPhanindraKumar/blob/main/Data/visualize/image_17.png">
 <img width="800" alt="image" src="https://github.com/DATA-606-2023-FALL-THURSDAY/Mulamreddy_DurgaVenkataPhanindraKumar/blob/main/Data/visualize/image_18.png">
+<img width="800" alt="image" src="https://github.com/DATA-606-2023-FALL-THURSDAY/Mulamreddy_DurgaVenkataPhanindraKumar/blob/main/Data/visualize/image_19.png">
