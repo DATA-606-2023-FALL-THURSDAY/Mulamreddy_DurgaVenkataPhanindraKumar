@@ -184,3 +184,8 @@ One-Hot Encoding or Label Encoding: Handling categorical variables.
 <img width="800" alt="image" src="https://github.com/DATA-606-2023-FALL-THURSDAY/Mulamreddy_DurgaVenkataPhanindraKumar/blob/main/Data/visualize/image_17.png">
 <img width="800" alt="image" src="https://github.com/DATA-606-2023-FALL-THURSDAY/Mulamreddy_DurgaVenkataPhanindraKumar/blob/main/Data/visualize/image_18.png">
 <img width="800" alt="image" src="https://github.com/DATA-606-2023-FALL-THURSDAY/Mulamreddy_DurgaVenkataPhanindraKumar/blob/main/Data/visualize/image_19.png">
+
+* The Random Forest demonstrates robust performance, especially in the harmony of Precision and Recall, as reflected by the F1-score. However, it takes a longer runtime than Logistic Regression.
+* With SMOTE, while the precision for frauds decreases, the recall experiences a significant boost, indicating fewer missed frauds.
+* The trade-off between Precision and Recall is evident, and the choice of model would depend on the specific requirements of detection.
+* The KNN performed much better after applying the hyperparameter tuning and that give a good and balanced precision and f1 score whereas the other models are either good at precision or recall not both.
