@@ -95,4 +95,91 @@
 * Convert data types for isFraud and isFlaggedFraud to boolean type.
 * Encode the categorical columns using OneHotEncoder.
 * Further divide the data into training and testing sets. Stratified sampling is used to ensure that both sets have a similar distribution of the target variable.
- 
+
+### OneHotEncoder
+* If we Label Encoding categorical variable (in this case 'type') as integer e.g. (0,1,2,..) algorithms might assume an ordinal relationhsip between the categories. For example
+
+* **PAYMENT = 0**
+* **TRANSFER = 1**
+* **CASH_OUT = 2**
+* **DEBIT = 3**
+* **CASH_IN = 4**
+* This might lead the model to assume that DEBIT(3) somehow greater than TRANSFER(2), which doesn't make sense. OneHotEncoding avoids this problem.
+* Instead of hard coding a single column, we will be defining a pipeline which will split the categorical features and numerical features based on their datatypes then OneHotEncode the categorical and scale the numerical data using standardscalar which were defined in a preprocessing step. 
+### Pipeline
+* A pipeline is a way to streamline a lot of the routine processes, making it easier to combine different steps of a machine learning workflow. A typical machine learning pipeline consists of three main stages:
+
+#### Data Preprocessing:
+
+* Data Cleaning: Handling missing values, outliers, and other inconsistencies in the data.
+Feature Scaling: Standardizing or normalizing features to bring them to a similar scale.
+Feature Engineering: Creating new features from existing ones or transforming features to improve model performance.
+One-Hot Encoding or Label Encoding: Handling categorical variables.
+#### Model Training:
+
+* Choosing a Model: Selecting a machine learning algorithm based on the nature of the problem (classification, regression, etc.) and the characteristics of the data.
+
+* Training the Model: Using training data to teach the model the patterns in the data.
+#### Model Evaluation:
+
+* Testing and Validation: Assessing the model's performance on data it hasn't seen before.
+
+* Hyperparameter Tuning: Adjusting the hyperparameters of the model to improve its performance.
+### Logistic Regression
+<img width="600" alt="image" src="https://github.com/DATA-606-2023-FALL-THURSDAY/Mulamreddy_DurgaVenkataPhanindraKumar/blob/main/Data/visualize/image_13.png"> 
+* Here are the results from the logistic regression classifier trained on the unbalanced dataset:
+
+* Accuracy: 99.83%
+* ROC AUC: 0.98
+* Precision (for Fraudulent transactions): 0.92
+* Recall (for Fraudulent transactions): 0.48
+* F1-score (for Fraudulent transactions): 0.63
+- Logistic Regression achieves high accuracy and ROC AUC, which means the model's overall reliability in classifying transactions is good. However, in fraud detection, where fraudulent transactions are intermingled with non-fraudulent ones, the balance between precision and recall often carries more weight than mere accuracy.
+
+- The recall is 0.48, indicating that the model can detect 48% of fraudulent activities. This is not ideal. In fraud detection, a high recall is critical to ensure that fewer fraudulent transactions go undetected.
+
+- The precision is 0.92, which means that for every 100 transactions the model predicts as fraudulent, 92 of them are genuinely fraudulent. A lower precision implies that a higher number of legitimate transactions are incorrectly flagged. We have a good value of precision but the recall is lower so need to have a balance between these two to get a good performance in the model. 
+
+- The F1-score is reflecting the trade-off in fraud detection between capturing real fraudulent activities and minimizing false alarms. Since this is baseline model, a score of 0.6 indicates that there is room for improvement.
+### Random Forest Classifier
+<img width="600" alt="image" src="https://github.com/DATA-606-2023-FALL-THURSDAY/Mulamreddy_DurgaVenkataPhanindraKumar/blob/main/Data/visualize/image_14.png">
+* Here are the results from the Random Forest classifier trained on the unbalanced dataset:
+
+* Accuracy: 89.83%
+* ROC AUC: 0.89
+* Precision (for Fraudulent transactions): 0.98
+* Recall (for Fraudulent transactions): 0.78
+* F1-score (for Fraudulent transactions): 0.86
+- Random Forest achieves good accuracy and ROC AUC, which means the model's overall reliability in classifying transactions is good. However, in fraud detection, where fraudulent transactions are intermingled with non-fraudulent ones, the balance between precision and recall often carries more weight than mere accuracy.
+
+- The recall is 0.78, indicating that the model can detect 78% of fraudulent activities. This is good. In fraud detection, a high recall is critical to ensure that fewer fraudulent transactions go undetected.
+
+- The precision is 0.98, which means that for every 100 transactions the model predicts as fraudulent, 98 of them are genuinely fraudulent. A lower precision implies that a higher number of legitimate transactions are incorrectly flagged. We have a good value of precision but the recall is lower so need to have a balance between these two to get a good performance in the model. 
+
+- The F1-score is reflecting the trade-off in fraud detection between capturing real fraudulent activities and minimizing false alarms. Since this is baseline model, a score of 0.8 indicates that the model is performing good..
+# Over Sampling and Under Sampling
+### Class imbalance in Classification
+* There are two ways to balance classes - by increasing the smaller class with random duplication, or by decreasing the larger class by randomly removing observations.
+
+#### SMOTE | Overcoming Class Imbalance Problem Using SMOTE
+
+* SMOTE is an oversampling technique where the synthetic samples are generated for the minority class. This algorithm helps to overcome the overfitting problem posed by random oversampling.
+
+* Using SMOTE has made the Random Forest classifier more sensitive to the minority class (in this case 'Fraud' = 1), leading to a significant increase in recall for fraudulent transactions. This model is now better at catching most of the fraudulent activities. However, this comes at the cost of reduced precision. The trade-off between Precision and Recall has now become clearer.
+#### K Nearest neighbour
+<img width="600" alt="image" src="https://github.com/DATA-606-2023-FALL-THURSDAY/Mulamreddy_DurgaVenkataPhanindraKumar/blob/main/Data/visualize/image_15.png">
+
+### Hyper Parameter Tuning
+* Hyperparameter tuning is the process of finding the best set of hyperparameters for a machine learning model. Hyperparameters are configuration settings that are not learned from the data but are set prior to the training process. They can significantly impact the performance of a machine learning model.
+
+* The process of hyperparameter tuning involves searching across a predefined hyperparameter space, training and evaluating the model with different combinations of hyperparameters, and selecting the set of hyperparameters that results in the best model performance.
+
+* There are different techniques and we will be using GridSearch for both the models
+### Grid Search:
+* This involves exhaustively searching through a manually specified subset of the hyperparameter space. It evaluates the model performance for all possible combinations of hyperparameters within the specified range.
+<img width="600" alt="image" src="https://github.com/DATA-606-2023-FALL-THURSDAY/Mulamreddy_DurgaVenkataPhanindraKumar/blob/main/Data/visualize/image_16.png">
+
+# Results and Comparision
+
+<img width="800" alt="image" src="https://github.com/DATA-606-2023-FALL-THURSDAY/Mulamreddy_DurgaVenkataPhanindraKumar/blob/main/Data/visualize/image_17.png">
+<img width="800" alt="image" src="https://github.com/DATA-606-2023-FALL-THURSDAY/Mulamreddy_DurgaVenkataPhanindraKumar/blob/main/Data/visualize/image_18.png">
