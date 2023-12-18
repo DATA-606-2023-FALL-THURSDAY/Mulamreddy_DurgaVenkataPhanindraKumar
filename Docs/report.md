@@ -190,3 +190,7 @@ One-Hot Encoding or Label Encoding: Handling categorical variables.
 * With SMOTE, while the precision for frauds decreases, the recall experiences a significant boost, indicating fewer missed frauds.
 * The trade-off between Precision and Recall is evident, and the choice of model would depend on the specific requirements of detection.
 * The KNN performed much better after applying the hyperparameter tuning and that give a good and balanced precision and f1 score whereas the other models are either good at precision or recall not both.
+# Future Scope
+* Developing a user friendly web page for seamless interaction with the Fraud detection System.
+* Implementing new algorithms to improve and get more insights about the data for better capabilities.
+* Create an interactive dashboard to empower financial institutions and users with real time monitoring capabilities.
