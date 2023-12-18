@@ -1,9 +1,9 @@
 # 0. Title and Author
 
-* Fraud Detection in Financial transactions
+# 1. Proposal Title - Fraud Detection in Financial transactions
 * Prepared for UMBC Data Science Master Degree Capstone by Dr Chaojie (Jay) Wang
-* Durga venkata Phanindra kumar Mulamreddy
-* Fall 2023
+* Author - Durga venkata Phanindra kumar Mulamreddy
+* Fall 2023 (MPS in Data Science)
 * [Github](https://github.com/Phanid221)
 * [Linkedin](https://www.linkedin.com/in/durga-venkata-phanindra-kumar-mulamreddy-19985114b/)
 * [Presentation File](https://docs.google.com/presentation/d/1AM0Am7FVatWk-zknMRazXcK0CSJ3-_bA/edit?usp=drive_link&ouid=108431256150573696211&rtpof=true&sd=true)
